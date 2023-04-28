@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5677933056734836348}
   - component: {fileID: 1221585369}
   - component: {fileID: 1221585370}
-  - component: {fileID: 1221585375}
   m_Layer: 0
   m_Name: PlayerRocket
   m_TagString: Untagged
@@ -128,19 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb8e6aecc376a343bb5b1c071f4965d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 125
-  rotationThrust: 75
---- !u!114 &1221585375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134956286655424102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb8e6aecc376a343bb5b1c071f4965d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainThrust: 100
+  mainThrust: 135
   rotationThrust: 100
