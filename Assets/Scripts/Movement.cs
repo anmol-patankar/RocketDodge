@@ -29,6 +29,29 @@ public class Movement : MonoBehaviour
     }
     void ProcessThrust()
     {
+        EngineThrust();
+
+    }
+
+    
+
+    void ProcessRotation()
+    {
+        SideThrust();
+    }
+
+    
+
+    void ApplyRotation(float rotationThisFrame)
+    {
+        rb.freezeRotation = true;
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+        rb.freezeRotation = false;
+
+
+    }
+    void EngineThrust()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
             if (!rocketThrust.isPlaying)
@@ -47,9 +70,8 @@ public class Movement : MonoBehaviour
             rocketThrust.Stop();
             audiosrc.Stop();
         }
-
     }
-    void ProcessRotation()
+    void SideThrust()
     {
         if (Input.GetKey(KeyCode.A))
         {
@@ -74,12 +96,5 @@ public class Movement : MonoBehaviour
             rightThrust.Stop();
         }
     }
-    void ApplyRotation(float rotationThisFrame)
-    {
-        rb.freezeRotation = true;
-        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false;
-
-
-    }
 }
+
