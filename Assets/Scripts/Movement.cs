@@ -6,6 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
+    public float velocityMagnitude;
     AudioSource audiosrc;
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust = 100f;
@@ -24,6 +25,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ReturnSpeed();
         ProcessThrust();
         ProcessRotation();
     }
@@ -49,6 +51,10 @@ public class Movement : MonoBehaviour
         rb.freezeRotation = false;
 
 
+    }
+    void ReturnSpeed()
+    {
+        velocityMagnitude=rb.velocity.magnitude;
     }
     void EngineThrust()
     {
