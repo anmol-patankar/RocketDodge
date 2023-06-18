@@ -28,7 +28,7 @@ public class CollisionHandler : MonoBehaviour
         }
 
     }
-    void Start()
+    void Star()
     {
         audsrc = GetComponent<AudioSource>();
     }
